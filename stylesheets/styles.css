@@ -1,293 +1,324 @@
-/*
-    Theme Name: yetablogtheme
-    Theme URI: http://blog.oozk.com/
-    Description: powered by <a href="http://blog.oozk.com/themes">mk-qi</a>, v0.1@2014.08.31
-    Version: v0.1
-    Author: mk-qi
-    Author E-Mail: root@mkrss.com
-    Tags: clean, navigation bar, valid XHTML, fixed width, two columns, blog
-    Text Domain: blogtheme
-    License: none (public domain)
-*/
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot');
+  src: url('../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix') format('embedded-opentype'),
+       local('Noto Sans'),
+       local('Noto-Sans-regular'),
+       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2') format('woff2'),
+       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.woff') format('woff'),
+       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf') format('truetype'),
+       url('../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans') format('svg');
+}
 
-html {
-  background: #6C7989;
-  background: #6c7989 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6c7989), color-stop(100%, #434b55)) fixed;
-  background: #6c7989 -webkit-linear-gradient(#6c7989, #434b55) fixed;
-  background: #6c7989 -moz-linear-gradient(#6c7989, #434b55) fixed;
-  background: #6c7989 -o-linear-gradient(#6c7989, #434b55) fixed;
-  background: #6c7989 -ms-linear-gradient(#6c7989, #434b55) fixed;
-  background: #6c7989 linear-gradient(#6c7989, #434b55) fixed;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-text-shadow: rgba(255,255,255,0.01) 0 0 1px;
-  text-rendering: optimizeLegibility;
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot');
+  src: url('../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix') format('embedded-opentype'),
+       local('Noto Sans Bold'),
+       local('Noto-Sans-700'),
+       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff2') format('woff2'),
+       url('../fonts/Noto-Sans-700/Noto-Sans-700.woff') format('woff'),
+       url('../fonts/Noto-Sans-700/Noto-Sans-700.ttf') format('truetype'),
+       url('../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot');
+  src: url('../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix') format('embedded-opentype'),
+       local('Noto Sans Italic'),
+       local('Noto-Sans-italic'),
+       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2') format('woff2'),
+       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.woff') format('woff'),
+       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf') format('truetype'),
+       url('../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot');
+  src: url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix') format('embedded-opentype'),
+       local('Noto Sans Bold Italic'),
+       local('Noto-Sans-700italic'),
+       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2') format('woff2'),
+       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff') format('woff'),
+       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
+       url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
 }
 
 body {
-  padding: 18px 0;
-  font-family: Helvetica, Tahoma,Arial, sans-serif;
-  font-weight: 400;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==') fixed;
-  color:#444;
+  background-color: #fff;
+  padding:50px;
+  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#727272;
   font-weight:400;
 }
 
-
-.wrapper {
-  width:860px;
-  background:none repeat scroll 0 0 #fff;
-  margin: 0 auto;
-  padding:0px;
+h1, h2, h3, h4, h5, h6 {
+  color:#222;
+  margin:0 0 20px;
 }
 
-
-/*layout -- */
-header
-{
-  margin:0px;  
-  padding:30px 30px 10px 30px;
-
+p, ul, ol, table, pre, dl {
+  margin:0 0 20px;
 }
 
-header h1
-{
-  width:300px;
-  margin:0px;
-  font-size:2em;
-  line-height:45px;
+h1, h2, h3 {
+  line-height:1.1;
 }
 
-header p
-{
-  font-size:14px;
-  width:600px;
-  width:300px;
-  margin:0px 0;
-  padding:0px 0 0 25px;
+h1 {
+  font-size:28px;
 }
 
-header .search {
-  width:200px;
-  float:right;
-  position:relative;
-  bottom:40px;
-  padding:0px;
-  right:0px;
-  height:20px;
+h2 {
+  color:#393939;
 }
 
-header nav
-{
-  margin-left:12px;
-  background:transparent;
-  margin:0px;
-  padding: 18px 0px  0px 0px;
-  width:580px;
-}
-
-header nav ul
-{
-  list-style:none outside none;
-  padding:0 10px;
-}
-header nav ul li
-{
-  float: left;
-  text-transform:uppercase;
-}
-
-header nav ul li a
-{
-  float:left;
-  background:#E5ECF9;
-  letter-spacing:1px;
-  color:#333!important;
-  margin:0 3px 0 0;
-}
-
-header nav ul li a span
-{
-  float:left;
-  display:block;
-  background:transparent;
-  padding:4px 6px 2px;
-}
-
-header nav ul li a:hover
-{
-  background-color:#C3D9FF;
-}
-
-header nav .line
-{
-  clear:both;
-  width:580px;
-  height:8px;
-  line-height:8px;
-  background:#C3D9FF;
-  border-top:1px solid #fff;
-  padding:0;
-}
-
-#content
-{
-  padding:0 26px;
-}
-article
-{
-  float:left;
-  width:560px;
-  border-right:2px solid #E5ECF9;
-  padding:0 15px 0 0px;
-  font-weight: normal;
-  line-height:1.4;
-  font-size:14px;
- 
-}
-
-article p
-{
-  margin:0;
-  padding:3px;
-  color:#444;
-  font-size:15px;
-  font-style: normal;
-  font-variant: normal;
-}
-
-article li
-{
-  padding-left:2px;
-  font-size:12px;
-  margin:0 -5px 0 12px;
-}
-
-.title {
-  font-size:20px;
-  padding:10px 0px;
-}
-aside
-{
-  float:left;
-  width:220px;
-  _padding:12px 0 0 10px;
-  margin:3px 0;
-  padding:12px 0 0 10px;
-  font-size: 12px;
-}
-aside h2
-{
-  font-size:1em;
-  line-height:1em;
-  font-family:Georgia,serif;
-  color:#000;
-  background:#EEE;
-  margin:0px 0 10px;
-}
-
-aside h2 em
-{
-  display:block;
-  font-style:normal;
-  padding:5px 10px;
-}
-
-aside ul,aside ol
-{
-  line-height:18px;
-  margin:0 0 0 1.4em;
-  padding:0 0 6px;
-}
-
-aside ul ul,aside ol ol
-{
-  padding:0;
-}
-aside ul li
-{
-  list-style:disc outside none;
-  padding-bottom:2px;
-  border-bottom:1px solid;
-  border-bottom-color:#F0F0F0;
-  margin:2px 0 0 10px;
-}
-
-aside li a
-{
-  height:1%;
-  padding:1px 0;
-}
-
-aside ul.pages li ul,aside ul.categories li ul,aside ul li.cat-item ul
-{
-  margin:0;
-}
-
-aside ul.pages li li,aside ul li.page_item li.page_item,aside ul.categories li li,aside ul li.cat-item li.cat-item
-{
-  margin-left:10px;
-  border-bottom:none;
-  padding:0;
-}
-
-aside ul.pages li ul ul,aside ul.categories li ul ul,aside ul li.cat-item ul ul
-{
-  margin:0 0 0 16px;
-}
-
-aside #wp-calendar table tfoot #prev a
-{
-  text-align:left;
-}
-
-aside #wp-calendar table tfoot #next a
-{
-  text-align:right;
-}
-
-
-
-footer
-{
-  clear:both;
-  height:50px;
-  border-top:2px solid #BBD0F9;
-  color:#000;
-  font-size:14px;
-  text-align:center;
-  padding:6px 0;
-  line-height: 40px;
-}
-
-footer span
-{
-  margin:0 20px;
-  padding:5px;
-}
-
-footer span #rss
-{
-  float:right;
-}
-
-.line
-{
-  border-top:2px solid #BBD0F9;
+h3, h4, h5, h6 {
+  color:#494949;
 }
 
 a {
-  text-decoration: none;
+  color:#39c;
+  text-decoration:none;
 }
 
-
-a:active
-{
-  background:#6495ed;
-  color:#000;
+a:hover {
+  color:#069;
 }
 
-a:link,a:visited
-{
-  color:#0082FF;
+a small {
+  font-size:11px;
+  color:#777;
+  margin-top:-0.3em;
+  display:block;
 }
 
+a:hover small {
+  color:#777;
+}
+
+.wrapper {
+  width:860px;
+  margin:0 auto;
+}
+
+blockquote {
+  border-left:1px solid #e5e5e5;
+  margin:0;
+  padding:0 0 0 20px;
+  font-style:italic;
+}
+
+code, pre {
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  color:#333;
+  font-size:12px;
+}
+
+pre {
+  padding:8px 15px;
+  background: #f8f8f8;
+  border-radius:5px;
+  border:1px solid #e5e5e5;
+  overflow-x: auto;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td {
+  text-align:left;
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+dt {
+  color:#444;
+  font-weight:700;
+}
+
+th {
+  color:#444;
+}
+
+img {
+  max-width:100%;
+}
+
+header {
+  width:270px;
+  float:left;
+  position:fixed;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
+header ul {
+  list-style:none;
+  height:40px;
+  padding:0;
+  background: #f4f4f4;
+  border-radius:5px;
+  border:1px solid #e0e0e0;
+  width:270px;
+}
+
+header li {
+  width:89px;
+  float:left;
+  border-right:1px solid #e0e0e0;
+  height:40px;
+}
+
+header li:first-child a {
+  border-radius:5px 0 0 5px;
+}
+
+header li:last-child a {
+  border-radius:0 5px 5px 0;
+}
+
+header ul a {
+  line-height:1;
+  font-size:11px;
+  color:#999;
+  display:block;
+  text-align:center;
+  padding-top:6px;
+  height:34px;
+}
+
+header ul a:hover {
+  color:#999;
+}
+
+header ul a:active {
+  background-color:#f0f0f0;
+}
+
+strong {
+  color:#222;
+  font-weight:700;
+}
+
+header ul li + li + li {
+  border-right:none;
+  width:89px;
+}
+
+header ul a strong {
+  font-size:14px;
+  display:block;
+  color:#222;
+}
+
+section {
+  width:500px;
+  float:right;
+  padding-bottom:50px;
+}
+
+small {
+  font-size:11px;
+}
+
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
+}
+
+footer {
+  width:270px;
+  float:left;
+  position:fixed;
+  bottom:50px;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
+@media print, screen and (max-width: 960px) {
+
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  header {
+    padding-right:320px;
+  }
+
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:0;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+
+  pre, code {
+    word-wrap:normal;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding:15px;
+  }
+
+  header ul {
+    width:99%;
+  }
+
+  header li, header ul li + li + li {
+    width:33%;
+  }
+}
+
+@media print {
+  body {
+    padding:0.4in;
+    font-size:12pt;
+    color:#444;
+  }
+}
